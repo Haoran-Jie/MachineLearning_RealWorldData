@@ -11,7 +11,7 @@ def get_transition_probs(hidden_sequences: List[List[str]]) -> Dict[Tuple[str, s
     @return: A dictionary from a (hidden_state, hidden_state) tuple to a probability.
     """
     res = dict()
-    tmp = dict()
+    tmp = dict() # count the number of occurence of a state
     hidden_states = set()
     for sample in hidden_sequences:
         now = sample[0]
